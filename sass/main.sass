@@ -1,0 +1,590 @@
+//--Variables
+// Colors
+$color-black: #000
+$color-white: #fff
+$color-purple: #320D5A
+$color-red: #9A031E
+$color-orange: #fb8b24
+// Gaps
+$gap-xs: 0.5rem
+$gap-s: 0.9rem
+$gap-m: 1rem
+$gap-l: 1.5rem
+$gap-xl: 2rem
+$gap-xxl: 3rem
+$gap-xxxl: 5rem
+$gap-xxxxl: 10rem
+//Fonts
+$font-family: "Inter", sans-serif
+
+//--Generals
+body
+  font-family: "Inter", sans-serif
+  font-size: $gap-m
+  margin: 0
+  padding: 0
+
+.img
+  display: block
+  width: 100%
+  object-fit: cover
+  object-position: center
+
+.ul-reset
+  display: flex
+  flex-wrap: wrap
+  list-style: none
+  padding: 0
+
+.link
+  display: inline-block
+  color: inherit
+  text-decoration: none
+
+.container
+  margin-inline: auto
+  max-width: 100%
+  padding-inline: $gap-xxxl
+  padding-top: $gap-xl
+  padding-bottom: $gap-xxxl
+
+.title
+  text-align: center
+  font-size: $gap-l
+  &:hover
+    color: $color-red
+
+.button1
+  background-color: $color-purple
+  color: white
+  font-weight: bold
+  border-radius: 50px
+  font-size: $gap-m
+  padding: $gap-s
+  text-align: center
+  &:hover
+    background-color: $color-orange
+    border-radius: 50px
+
+.button2
+  background-color: $color-red
+  color: white
+  font-weight: bold
+  border-radius: 50px
+  font-size: $gap-m
+  padding: $gap-s
+  text-align: center
+  &:hover
+    background-color: $color-orange
+    border-radius: 50px
+
+.button3
+  background-color: $color-orange
+  color: white
+  font-weight: bold
+  border-radius: 50px
+  font-size: $gap-m
+  padding: $gap-s
+  text-align: center
+  &:hover
+   background-color: $color-purple
+   border-radius: 50px
+
+.section
+  margin-top: $gap-xxxl
+  margin-bottom: $gap-xxxl
+
+.fieldset
+  border: none
+
+.text
+  text-align: center
+//--Page
+
+.header-top
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding-bottom: 0
+  &__logo
+    width: $gap-xxxl
+  &__link
+    background-color: $color-purple
+    width: 10rem
+    border-radius: $gap-xl
+    &:hover
+      background-color: $color-orange
+      width: 10rem
+      border-radius: $gap-xl
+    &__text
+      text-align: center
+      font-size: $gap-m
+      font-weight: bold
+      color: $color-white
+      margin: $gap-s
+  @media (width < 600px)
+    display: flex
+    flex-direction: column
+    gap: 1rem
+
+.header-bottom
+  padding-bottom: $gap-xl
+  @media (width < 600px)
+    padding-inline:  0
+    padding-top: 2rem
+    margin: 0
+  &__menu
+   &__ul
+     display: flex
+     justify-content: space-evenly
+     gap: $gap-l
+     @media (width < 600px)
+       display: flex
+       flex-direction: row
+       justify-content: space-evenly
+       color: $color-black
+       gap: 0
+       border-bottom: 1px solid #8a8a8a
+       box-shadow: 0 1px #8a8a8a
+       padding-bottom: 1rem
+   &__li
+     @media (width < 600px)
+       font-size: 0.7rem
+       margin-inline: 0
+       padding-inline: 0
+       box-shadow: 0 -4px 0px rgba(50, 13, 90, 0.66) inset
+     &:hover
+       box-shadow: 0 -4px 0px rgba(50, 13, 90, 0.66) inset
+
+
+.hero
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-around
+  padding-top: 0
+  margin-top: 0
+  @media (width < 600px)
+    background-image: url("../img/heromobile.png")
+    background-repeat: no-repeat
+    background-position: center
+    background-size: 18rem
+    display: flex
+    flex-direction: column
+    text-align: center
+    margin: 0
+    padding: $gap-xxl
+  &__container-top
+    width: 50%
+    padding-right: 0
+    margin-right: 0
+    @media (width < 600px)
+      padding: initial
+      width: initial
+      margin: initial
+      text-align: center
+      padding-block: $gap-xl
+    &__title
+      text-align: center
+      font-size: $gap-l
+      font-weight: bold
+    &__text
+      text-align: center
+      font-size: $gap-m
+    &__buttons
+      display: flex
+      flex-direction: row
+      gap: 1rem
+      justify-content: center
+      margin-top: 4rem
+      @media (width < 600px)
+        display: flex
+        flex-direction: column
+        gap: 1rem
+        align-items: center
+      &__button1
+        width: $gap-xxxxl
+        background-color: $color-purple
+        color: white
+        font-weight: bold
+        border-radius: 50px
+        font-size: $gap-m
+        padding: $gap-xl
+        text-align: center
+        &:hover
+          background-color: $color-orange
+          border-radius: 50px
+          width: $gap-xxxxl
+      &__button2
+        width: $gap-xxxxl
+        background-color: $color-red
+        text-align: center
+        color: white
+        font-weight: bold
+        border-radius: 50px
+        font-size: $gap-m
+        padding: $gap-xl
+        &:hover
+          background-color: $color-orange
+          border-radius: 50px
+          width: $gap-xxxxl
+  &__container-bottom
+    width: 50%
+    padding-top: 0
+    margin-top: 0
+    @media (width < 600px)
+      display: none
+
+
+.about_container
+  display: flex
+  flex-direction: row
+  text-align: center
+  @media (width < 600px)
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-inline: $gap-xl
+  &__text
+    display: flex
+    flex-direction: column
+    justify-content: center
+    text-align: center
+    margin-inline: 0
+    gap: 1rem
+    font-size: $gap-m
+  &__img
+    max-width: 40%
+    border-radius: 30px
+    margin-left: $gap-l
+    @media (width < 600px)
+      display: none
+
+.about-special_container
+  display: flex
+  flex-direction: row
+  justify-content: space-evenly
+  align-items: center
+  gap: $gap-xxxl
+  margin-top: $gap-l
+  @media (width < 600px)
+    display: flex
+    flex-direction: column
+    gap: $gap-xxl
+    align-items: center
+  &__text
+    text-align: center
+    font-size: $gap-m
+  &__img
+    max-width: 10rem
+
+
+.about-teachers_container
+  display: flex
+  flex-direction: row
+  justify-content: space-evenly
+  align-items: center
+  gap: $gap-xxl
+  @media (width < 600px)
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: $gap-xxl
+    padding: $gap-xl
+
+.about-teachers
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 0
+  &_title
+    margin-bottom: 0
+
+.courses_container
+  display: flex
+  flex-direction: row
+  gap: $gap-xxl
+  padding-bottom: $gap-xl
+  @media (width < 600px)
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: $gap-xxl
+    padding: $gap-xl
+
+.courses-type
+  display: flex
+  flex-direction: column
+  justify-content: space-evenly
+  align-items: center
+  &_img
+    max-width: 17rem
+    border-radius: 30px
+
+.courses_link_container
+  text-align: center
+
+.feedback_title
+  margin-top: $gap-xxxl
+
+.feedback_container
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: $gap-xxl
+  @media (width < 900px)
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: $gap-xxl
+    padding: $gap-xl
+  &__box
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    gap: 1rem
+    background-color: $color-purple
+    border-radius: 10px
+    color: $color-white
+    padding: $gap-xxl
+    @media (width < 600px)
+      display: flex
+      flex-direction: column
+      align-items: center
+      padding: $gap-xl
+    &__img
+      width: $gap-xxxxl
+      height: $gap-xxxxl
+      border-radius: 50%
+
+.orange-color
+  background-color: $color-orange
+
+.red-color
+  background-color: $color-red
+
+.price_container-top
+  text-align: center
+
+.price_container-bottom
+  display: flex
+  flex-direction: row
+  gap: $gap-xxxl
+  @media (width < 900px)
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: $gap-xl
+
+.price_container-top
+  @media (width < 600px)
+    margin: $gap-xl
+
+.prices_purple
+  border: 1px solid $color-purple
+  padding-bottom: $gap-xl
+  padding-top: $gap-xl
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-evenly
+  border-radius: 10px
+  padding-inline: $gap-xxl
+  min-height: 30rem
+  &__title
+    background: linear-gradient(transparent 60%, rgba(50, 13, 90, 0.61) 0)
+
+.prices_orange
+  border: 1px solid $color-orange
+  padding-bottom: $gap-xl
+  padding-top: $gap-xl
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-evenly
+  border-radius: 10px
+  padding-inline: $gap-xxl
+  min-height: 30rem
+  &__title
+    background: linear-gradient(transparent 60%, rgba(251, 139, 36, 0.62) 0)
+
+.prices_red
+  border: 1px solid $color-red
+  padding-bottom: $gap-xl
+  padding-top: $gap-xl
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-evenly
+  border-radius: 10px
+  padding-inline: $gap-xxl
+  min-height: 30rem
+  &__title
+    background: linear-gradient(transparent 60%, rgba(154, 3, 30, 0.66) 0)
+
+.form-top
+  display: flex
+  flex-direction: column
+
+.form-global_container
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-evenly
+  gap: 2rem
+  @media (width < 600px)
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    padding-inline: $gap-xl
+.form_container
+  display: flex
+  flex-direction: column
+  border: initial
+  margin-left: initial
+  margin-right: 0
+  padding: initial
+  gap: $gap-xl
+  @media (width < 600px)
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    padding-inline: $gap-xl
+  &__title
+    text-align: center
+    font-weight: bold
+    margin-bottom: $gap-xl
+  &__input
+    border-radius: $gap-xxxl
+    text-align: center
+    border: 1.5px solid $color-purple
+  &__textarea
+    border-radius: $gap-l
+    border: 1.5px solid $color-purple
+  &__button
+    display: block
+    padding: 1rem
+    margin-top: $gap-xl
+    text-align: center
+    border: none
+
+.form-info_container
+  margin-right: 0
+  margin-left: 1rem
+  padding: 0
+  @media (width < 600px)
+    margin: initial
+  &__title
+   font-weight: bold
+   font-size: $gap-l
+   margin-top: 0
+
+fieldset
+  border: none
+
+.form-img
+  border-radius: $gap-xxl
+  max-width: 30rem
+
+footer
+  background-color: rgba(50, 13, 90, 0.85)
+  bottom: 0
+  margin: 0 auto
+  width: 100%
+  height: 100%
+
+.footer_container
+  display: flex
+  gap: 35px
+  width: 100%
+  align-items: center
+  justify-content: space-evenly
+  @media (width < 600px)
+    display: flex
+    flex-direction: column
+    gap: 1rem
+
+.footer_img
+  &__image
+    border-radius: $gap-xxxxl
+    width: 8rem
+
+.ul_footer
+  display: flex
+  flex-direction: column
+  align-items: center
+  color: $color-white
+  gap: $gap-xl
+
+.footer-menu
+  color: $color-white
+  &:hover
+   color: $color-orange
+
+.footer-sitemap_title
+ color: white
+ font-weight: bold
+ font-size: $gap-l
+ text-align: center
+ @media (width < 600px)
+    margin-bottom: 0
+    padding-bottom: 0
+    margin-top: 0
+    padding-top: 0
+
+.footer-contactinfo
+  &__title
+    font-weight: bold
+    font-size: $gap-l
+    color: $color-white
+    text-align: center
+  &__text
+    color: $color-white
+
+.footer-sns
+  display: flex
+  flex-direction: row
+  justify-content: center
+  gap: $gap-xl
+  &__img
+    width: $gap-xxl
+
+.footer-copyrigth
+  border-top: 1px solid $color-white
+  color: white
+  text-align: center
+  border-bottom: 0
+  &__text
+    margin-bottom: 0
+    padding-bottom: 0
+    margin-right: 3rem
+    @media (width < 600px)
+      margin-right: initial
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
